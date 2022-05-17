@@ -1,0 +1,20 @@
+{
+  "compilerOptions": {
+    "target": "es2017",
+    "allowSyntheticDefaultImports": true,
+    "baseUrl": "src",
+    "jsx": "react",
+    "module": "commonjs",
+    "paths": {
+      "app-commons": ["commons/index.js"],
+      "app-components": ["components/index.js"],
+      "app-constants": ["constants/index.js"],
+      "app-hooks": ["hooks/index.js"],
+      "app-pages": ["pages/index.js"],
+      "app-providers": ["providers/index.js"],
+      "app-utils": ["utils/index.js"],
+      "app-scripts": ["scripts/index.js"]
+    }
+  },
+  "exclude": ["build", "node_modules"]
+}
