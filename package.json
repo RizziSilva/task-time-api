@@ -1,7 +1,7 @@
 {
   "name": "task-time-web",
   "version": "1.0.0",
-  "description": "Projeto criado para a cadeira de projeto integrador da faculdade feevale\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[F",
+  "description": "Projeto criado para a cadeira de projeto integrador da faculdade feevale",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
