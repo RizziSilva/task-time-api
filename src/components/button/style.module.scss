@@ -1,0 +1,13 @@
+@import 'includes.scss';
+
+.button {
+  background-color: $vivid-tangerine;
+  color: $white;
+  border: none;
+  border-radius: 5px;
+  padding: 8px 0;
+  width: 100%;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+}

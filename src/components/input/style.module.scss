@@ -1,0 +1,49 @@
+@import 'includes.scss';
+
+.fieldset {
+  margin: 15px 0;
+  position: relative;
+  border: none;
+  padding: 0;
+  width: 100%;
+
+  > .input {
+    background-color: $white;
+    border-radius: 5px;
+    border: 1px solid $black;
+    height: 36px;
+    width: calc(100% - 20px);
+    padding-left: 16px;
+    color: $grey;
+
+    ~ label {
+      transform: translateY(-50%);
+      transition: 300ms ease-in-out;
+      top: 50%;
+      position: absolute;
+      left: 16px;
+      color: $black;
+    }
+
+    &:focus {
+      border-color: $grey;
+      outline: none;
+
+      ~ label {
+        color: $grey;
+        top: -9px;
+        left: 6px;
+      }
+    }
+
+    &.hasValue {
+      border-color: $grey;
+
+      ~ label {
+        color: $grey;
+        top: -9px;
+        left: 6px;
+      }
+    }
+  }
+}
