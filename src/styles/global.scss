@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600&display=swap');
+
+.container-page {
+  width: 100vw;
+  height: 100vh;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.toast {
+  border-radius: 4px;
+  font-family: Poppins, sans-serif;
+  font-weight: bold;
+
+  .Toastify__progress-bar {
+    background: #ffa799;
+  }
+}
