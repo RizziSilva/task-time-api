@@ -2,7 +2,7 @@ require('./dotenv')
 const express = require('express')
 const next = require('next')
 
-const PORT = process.env.port || 3000
+const PORT = process.env.PORT || 3000
 const isRunningLocally = process.env.ENVIRONMENT === 'LOCAL'
 const app = next({ dev: isRunningLocally })
 const server = express()

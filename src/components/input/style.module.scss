@@ -14,7 +14,7 @@
     height: 36px;
     width: calc(100% - 20px);
     padding-left: 16px;
-    color: $grey;
+    color: $black;
 
     ~ label {
       transform: translateY(-50%);
@@ -26,21 +26,16 @@
     }
 
     &:focus {
-      border-color: $grey;
       outline: none;
 
       ~ label {
-        color: $grey;
         top: -9px;
         left: 6px;
       }
     }
 
     &.hasValue {
-      border-color: $grey;
-
       ~ label {
-        color: $grey;
         top: -9px;
         left: 6px;
       }
