@@ -2,14 +2,14 @@ import { useState } from 'react'
 import { useRouter } from 'next/router'
 import { toast } from 'react-toastify'
 import { Input, Button } from 'app-components'
-import { userService } from 'app-services'
+import { UserService } from 'app-services'
 import { storageUtil } from 'app-utils'
 import { PAGES } from 'app-constants'
 import style from './style.module.scss'
 
 export function Login() {
   const router = useRouter()
-  const { login } = userService()
+  const userService = UserService()
   const { saveUserInfoOnStorage } = storageUtil()
   const [form, setForm] = useState({ email: '', password: '' })
 
@@ -27,7 +27,7 @@ export function Login() {
 
   async function handleSubmitClick() {
     try {
-      const response = await login(form)
+      const response = await userService.login(form)
       saveUserInfoOnStorage(response)
       router.push(PAGES.HOME)
     } catch (error) {
@@ -53,6 +53,7 @@ export function Login() {
           value={form.password}
           name='password'
           id='password'
+          type='password'
           label='Senha'
         />
         <Button

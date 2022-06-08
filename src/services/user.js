@@ -1,6 +1,6 @@
 import { useRequest } from 'app-hooks'
 
-export function userService() {
+export function UserService() {
   const { post } = useRequest()
 
   async function login(body) {

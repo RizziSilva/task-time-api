@@ -4,7 +4,7 @@ import '../src/styles/global.scss'
 
 export default function MyApp({ Component, pageProps }) {
   return (
-    <div className='container-page'>
+    <>
       <ToastContainer
         position='top-right'
         autoClose={5000}
@@ -13,6 +13,6 @@ export default function MyApp({ Component, pageProps }) {
         className='toast'
       />
       <Component {...pageProps} />
-    </div>
+    </>
   )
 }
