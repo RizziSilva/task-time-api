@@ -1,0 +1,41 @@
+@import 'includes.scss';
+
+.container-home {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: $pale-pink;
+
+  > .container-header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 4px 0 0;
+    background-color: $white;
+    box-shadow: black 0px 6px 12px -12px;
+
+    > .container-input {
+      flex: auto;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+
+      > .input {
+        width: 100%;
+        min-height: 32px;
+        padding-left: 10px;
+        margin-bottom: 5px;
+        border: none;
+        outline: none;
+        box-shadow: black 0px 6px 12px -12px;
+
+        &:last-child {
+          margin-bottom: 0;
+          border: none;
+          box-shadow: none;
+        }
+      }
+    }
+  }
+}

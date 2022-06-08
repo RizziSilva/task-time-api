@@ -1,0 +1,22 @@
+.container-time {
+  display: flex;
+  min-width: 120px;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 50%;
+
+  > .button-time {
+    border: none;
+    outline: none;
+    background: transparent;
+    cursor: pointer;
+  }
+
+  > .time {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+}

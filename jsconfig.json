@@ -11,7 +11,8 @@
       "app-pages": ["pages/index.js"],
       "app-services": ["services/index.js"],
       "app-constants": ["constants/index.js"],
-      "app-utils": ["utils/index.js"]
+      "app-utils": ["utils/index.js"],
+      "app-statics": ["statics/index.js"]
     }
   },
   "exclude": ["build", "node_modules"]

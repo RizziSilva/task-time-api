@@ -10,5 +10,6 @@ module.exports = {
   'app-hooks': resolveApp('src/hooks'),
   'app-services': resolveApp('src/services'),
   'app-constants': resolveApp('src/constants'),
-  'app-utils': resolveApp('src/utils')
+  'app-utils': resolveApp('src/utils'),
+  'app-statics': resolveApp('src/statics')
 }
