@@ -6,12 +6,24 @@ export function storageUtil() {
   }
 
   function getUserInformation() {
-    const userName = localStorage.getItem('username')
-    const userEmail = localStorage.getItem('userEmail')
-    const idUser = localStorage.getItem('userId')
+    if (typeof window !== 'undefined') {
+      const userName = localStorage.getItem('username')
+      const userEmail = localStorage.getItem('userEmail')
+      const idUser = localStorage.getItem('userId')
 
-    return { userName, userEmail, idUser }
+      return { userName, userEmail, idUser }
+    }
+
+    return { userName: '', userEmail: '', idUser: '' }
   }
 
-  return { saveUserInfoOnStorage, getUserInformation }
+  function removeUserInformationFromStorage() {
+    localStorage.clear()
+  }
+
+  return {
+    saveUserInfoOnStorage,
+    getUserInformation,
+    removeUserInformationFromStorage
+  }
 }
