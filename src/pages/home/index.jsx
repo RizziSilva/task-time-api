@@ -7,7 +7,7 @@ import {
   INITIAL_TASK_STATE,
   CREATE_TASK_DEFAULT_ERROR
 } from './constants'
-import { Timer } from './components'
+import { Timer, TaskList } from './components'
 import style from './style.module.scss'
 
 export function Home() {
@@ -61,6 +61,7 @@ export function Home() {
           onStop={createTask}
         />
       </div>
+      <TaskList />
     </div>
   )
 }
