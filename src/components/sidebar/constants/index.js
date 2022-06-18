@@ -1,5 +1,5 @@
 import { PAGES } from 'app-constants'
-import { TIMER_ICON } from 'app-statics'
+import { WHITE_TIMER_ICON } from 'app-statics'
 
 export const SIDEBAR_ITEMS = [
   {
@@ -8,7 +8,7 @@ export const SIDEBAR_ITEMS = [
       {
         text: 'Cronômetro',
         page: PAGES.HOME,
-        icon: TIMER_ICON
+        icon: WHITE_TIMER_ICON
       }
     ]
   }

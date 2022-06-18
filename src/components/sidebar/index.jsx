@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import { useRouter } from 'next/router'
-import { USER_ICON, LOGO_ICON } from 'app-statics'
+import { WHITE_USER_ICON, LOGO_ICON } from 'app-statics'
 import { storageUtil } from 'app-utils'
 import { PAGES } from 'app-constants'
 import { SIDEBAR_ITEMS } from './constants'
@@ -55,7 +55,7 @@ export function Sidebar() {
           <span className={style['info']}>{userEmail}</span>
         </div>
         <div className={style['container-icon']}>
-          <Image src={USER_ICON} width={40} height={40} />
+          <Image src={WHITE_USER_ICON} width={40} height={40} />
         </div>
       </div>
     )

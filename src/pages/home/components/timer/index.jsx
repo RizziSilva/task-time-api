@@ -5,7 +5,7 @@ import { calculateTimeFromSeconds } from '../../utils'
 import { PLACEHOLDER_TIME } from '../../constants'
 import style from './style.module.scss'
 
-export function Timer({ setCurrentTask, currentTask, onStop }) {
+export function Timer({ setCurrentTask, currentTask, onStop, triggerReplay }) {
   const [isPlaying, setIsPlay] = useState(false)
   const [timer, setTimer] = useState(0)
 
@@ -13,20 +13,28 @@ export function Timer({ setCurrentTask, currentTask, onStop }) {
     let count
 
     if (isPlaying) {
-      count = setTimeout(() => {
-        const countTimer = timer + 1
-
-        setTimer(countTimer)
+      count = setInterval(() => {
+        setTimer(prevTimer => prevTimer + 1)
       }, 1000)
-    } else {
+    } else if (!isPlaying) {
       setTimer(0)
-      clearTimeout(count)
+      clearInterval(count)
     }
-  }, [isPlaying, timer])
+
+    return () => {
+      clearInterval(count)
+    }
+  }, [isPlaying])
+
+  useEffect(() => {
+    if (triggerReplay) setIsPlay(true)
+  }, [triggerReplay])
 
   function handlePlayStopClick() {
     if (!isPlaying) {
       const initiatedAt = new Date()
+      initiatedAt.setHours(initiatedAt.getHours() - 3)
+
       setCurrentTask({ ...currentTask, initiatedAt })
     } else {
       onStop()

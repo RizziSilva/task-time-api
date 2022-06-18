@@ -1,14 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600&display=swap');
-
-// .container-page {
-//   width: 100vw;
-//   height: 100vh;
-// }
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600&family=Roboto:wght@100;300;400;500;700&display=swap');
 
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Roboto', sans-serif;
   min-height: 100vh;
 }
 
@@ -34,4 +29,31 @@ body {
   .Toastify__progress-bar {
     background: #ffa799;
   }
+}
+
+::-webkit-scrollbar {
+  max-width: 5px;
+  background: transparent;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar:horizontal {
+  height: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #ff998a;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-button {
+  display: none;
+}
+
+::-webkit-scrollbar:hover {
+  background: #ff998a;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #ff998a;
 }
