@@ -3,7 +3,8 @@ export const INITIAL_TASK_STATE = {
   description: '',
   link: '',
   initiatedAt: null,
-  endedAt: null
+  endedAt: null,
+  taskId: null
 }
 
 export const DAYS_TEXT = [

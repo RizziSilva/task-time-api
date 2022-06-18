@@ -1,5 +1,7 @@
 @import 'includes.scss';
 
+$sidebar-font-color: $white;
+
 .container-sidebar {
   width: 190px;
   height: 100vh;
@@ -30,6 +32,8 @@
       > .title {
         font-size: 14px;
         margin-bottom: 5px;
+        color: $sidebar-font-color;
+        font-weight: 400;
       }
 
       > .container-action {
@@ -43,6 +47,8 @@
           border: none;
           font-size: 16px;
           cursor: pointer;
+          color: $sidebar-font-color;
+          font-weight: 700;
         }
       }
     }
@@ -58,6 +64,7 @@
       width: 100%;
       display: flex;
       margin-bottom: 15px;
+      align-items: center;
 
       > .container-info {
         display: flex;
@@ -71,11 +78,16 @@
           white-space: nowrap;
           overflow: hidden;
           font-size: 12px;
+          color: $sidebar-font-color;
         }
       }
 
       > .container-icon {
         min-width: 40px;
+
+        svg {
+          fill: $sidebar-font-color;
+        }
       }
     }
 
@@ -87,6 +99,8 @@
       cursor: pointer;
       margin: 0;
       padding: 0;
+      color: $sidebar-font-color;
+      font-weight: 700;
     }
   }
 }

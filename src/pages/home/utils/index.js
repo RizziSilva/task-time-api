@@ -1,2 +1,2 @@
 export { calculateTimeFromSeconds } from './timer'
-export { groupTasks, getDayOfWeek } from './task'
+export { groupTasks, getDayOfWeek, findTaskById } from './task'

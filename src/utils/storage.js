@@ -1,4 +1,9 @@
 export function storageUtil() {
+  function getItem(itemName) {
+    const item = localStorage.getItem(itemName)
+    return item === 'undefined' ? undefined : item
+  }
+
   function saveUserInfoOnStorage({ data }) {
     localStorage.setItem('username', data.name)
     localStorage.setItem('userEmail', data.email)
@@ -7,9 +12,9 @@ export function storageUtil() {
 
   function getUserInformation() {
     if (typeof window !== 'undefined') {
-      const userName = localStorage.getItem('username')
-      const userEmail = localStorage.getItem('userEmail')
-      const idUser = localStorage.getItem('userId')
+      const userName = getItem('username')
+      const userEmail = getItem('userEmail')
+      const idUser = getItem('userId')
 
       return { userName, userEmail, idUser }
     }

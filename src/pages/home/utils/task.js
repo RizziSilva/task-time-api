@@ -25,3 +25,15 @@ export function getDayOfWeek(date) {
 
   return dateText
 }
+
+export function findTaskById(tasks, taskTimeTaskId) {
+  let task
+
+  tasks.forEach(tasks => {
+    const founded = tasks.find(({ taskId }) => taskId === taskTimeTaskId)
+
+    if (founded) task = founded
+  })
+
+  return task
+}
